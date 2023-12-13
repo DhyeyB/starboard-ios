@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="StarboardSuite">
+  <test thread-count="5" name="Starboard_test_cases" verbose="10">
+    <classes>
+    	<class name="general.Base"/>
+    	<class name="general.Add_Location"/>
+    	<!--class name="general.Login_test"/>
+    	<class name="general.Linking_Transactions"/>
+    	<class name="general.More_Module"/>
+      	<class name="general.Setting_Preference"/>
+      	<class name="general.Setting_Yacht"/>
+      	<class name="general.Invite_Crew"/>-->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
