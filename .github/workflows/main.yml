@@ -1,0 +1,35 @@
+name: Appium CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        include:
+          - xcode: "13.2"
+            ios: "15.2"
+
+    steps:
+    - uses: actions/checkout@v4 
+
+    - name: Use Node.js 18
+      uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3
+      with:
+        node-version: 18.18.2
+
+    - name: Install and Run Appium Server
+      run: |
+        npm install -g appium@v1.22
+        appium -v
+        npm -g install npm
+        appium > /dev/null &
+
+    - uses: futureware-tech/simulator-action@v3
+      with:
+          model: 'iPhone 14'
+
+    - run: mvn clean test
