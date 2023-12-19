@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: macos-latest
+
+    # outputs:
+    #   udid: ${{ steps.udid-ios-simulator.outputs.udid }}
     # strategy:
     #   matrix:
     #     include:
@@ -33,8 +36,8 @@ jobs:
           appium -v
           npm -g install npm
           appium driver list --installed
-          npm install -g appium-xcuitest-driver
-          npm install -g appium-ios-driver
+          # npm install -g appium-xcuitest-driver
+          # npm install -g appium-ios-driver
           # appium > /dev/null &
 
       - name: Install appium driver
@@ -44,20 +47,26 @@ jobs:
           appium driver install xcuitest
 
 
-      - name: Start Appium Server
-        run: |
-          appium > appium.log 2>&1 &
-          ls -la
+      # - name: Start Appium Server
+      #   run: |
+      #     appium > appium.log 2>&1 &
+      #     ls -la
 
       # - name: Wait for Appium Server to Start
       #   run: sleep 10
 
       - name: ios simulator
+        id: udid-ios-simulator
         uses: futureware-tech/simulator-action@v3
         with:
             model: 'iPhone 14 Pro Max'
             # os: 'iOS'
             # udid: "704210AC-CBDA-470A-AAEA-46F68DD733EB"
+
+      - name: Start Appium Server
+        run: |
+          appium --udid ${{ steps.udid-ios-simulator.outputs.udid }} > appium.log 2>&1 &
+          ls -la
              
 
       # - uses: maxim-lobanov/setup-xcode@v1
