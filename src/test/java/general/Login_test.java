@@ -175,15 +175,15 @@ public class Login_test
 
 		// }
 
-		// catch (Exception e1)
+		catch (Exception e1)
 
-		// {
+		{
 
-		// 	System.out.println(e1);
-		// 	Allure.addAttachment("AllureSelenide",
-		// 			new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+			System.out.println(e1);
+			Allure.addAttachment("AllureSelenide",
+					new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 
-		// }
+		}
 
 	}
 
