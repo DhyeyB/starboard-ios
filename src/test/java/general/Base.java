@@ -61,7 +61,7 @@ public class Base
 		System.out.println("**********----------     application installed    **********----------");
 		cap.setCapability(MobileCapabilityType.NO_RESET, true); // It will always clear the cachess
 		
-		driver = new IOSDriver<MobileElement>(new URL("http://0.0.0.0:4723/"), cap);
+		driver = new IOSDriver<MobileElement>(new URL("http://127.0.0.1:4723/"), cap);
 		
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 		
