@@ -51,7 +51,8 @@ jobs:
       - name: Wait for Appium Server to Start
         run: sleep 10
 
-      - uses: futureware-tech/simulator-action@v3
+      - name: ios simulator
+        uses: futureware-tech/simulator-action@v3
         with:
             model: 'iPhone 14 Pro Max'
             # os: 'iOS'
