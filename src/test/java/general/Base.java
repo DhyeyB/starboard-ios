@@ -56,7 +56,7 @@ public class Base
 		cap.setCapability("automationName", "XCUITest");			
 		cap.setCapability("udid", "704210AC-CBDA-470A-AAEA-46F68DD733EB");
 		// cap.setCapability("udid", "0211057B-AA02-4ECC-970A-C1E80B9EC0BC");
-		cap.setCapability("app", "../../../app/Starboard.app");
+		cap.setCapability("app", "app/Starboard.app");
 		System.out.println("**********----------     application installed    **********----------");
 		cap.setCapability(MobileCapabilityType.NO_RESET, true); // It will always clear the cachess
 		

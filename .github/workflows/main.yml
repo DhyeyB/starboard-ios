@@ -47,6 +47,7 @@ jobs:
       - name: Start Appium Server
         run: |
           appium > appium.log 2>&1 &
+          ls -la
 
       - name: Wait for Appium Server to Start
         run: sleep 10
