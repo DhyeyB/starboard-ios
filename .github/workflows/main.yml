@@ -32,6 +32,8 @@ jobs:
           npm install -g appium
           appium -v
           npm -g install npm
+          appium driver list --installed
+          npm install -g appium-ios-driver
           # appium > /dev/null &
 
       - name: Start Appium Server
