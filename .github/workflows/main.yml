@@ -32,7 +32,18 @@ jobs:
           npm install -g appium@v1.22
           appium -v
           npm -g install npm
-          appium > /dev/null &
+          # appium > /dev/null &
+
+      - name: Start Appium Server
+        run: |
+          appium > appium.log 2>&1 &
+
+      - name: Wait for Appium Server to Start
+        run: sleep 10
+
+      - name: Install Maven
+        run: |
+          brew install maven
 
       # - uses: futureware-tech/simulator-action@v3
       #   with:
@@ -42,7 +53,16 @@ jobs:
         with:
           xcode-version: latest-stable
 
-      - run: mvn clean test
+      - name: Run Appium Tests
+        run: mvn clean test
+
+      - name: Upload Appium Logs
+        if: always()
+        uses: actions/upload-artifact@master
+        with:
+          name: appium-logs
+          path: |
+            appium.log
 
       - name: upload app
         if: always()
@@ -51,4 +71,4 @@ jobs:
         with:
           name: Debugging-SS
           path: |
-            ./target/allure-results(base)
+            ./target/allure-results
