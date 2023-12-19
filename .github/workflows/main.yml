@@ -65,6 +65,7 @@ jobs:
 
       - name: Start Appium Server
         run: |
+          appium --help
           appium --udid ${{ steps.udid-ios-simulator.outputs.udid }} > appium.log 2>&1 &
           ls -la
              
