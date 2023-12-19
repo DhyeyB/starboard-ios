@@ -7,11 +7,11 @@ on:
 jobs:
   build:
     runs-on: macos-latest
-    strategy:
-      matrix:
-        include:
-          - xcode: "13.2"
-            ios: "15.2"
+    # strategy:
+    #   matrix:
+    #     include:
+    #       - xcode: "13.2"
+    #         ios: "15.2"
 
     steps:
       - uses: actions/checkout@v4
@@ -43,3 +43,12 @@ jobs:
           xcode-version: latest-stable
 
       - run: mvn clean test
+
+      - name: upload app
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@master
+        with:
+          name: Debugging-SS
+          path: |
+            ./target/allure-results(base)
