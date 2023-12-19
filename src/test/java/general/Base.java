@@ -54,7 +54,7 @@ public class Base
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 14 Pro Max");
 		cap.setCapability("automationName", "XCUITest");			
-		cap.setCapability("udid", "704210AC-CBDA-470A-AAEA-46F68DD733EB");
+		cap.setCapability("udid", "9C1BA654-4AB4-4F38-A132-C0B68AF8F69E");
 		// cap.setCapability("udid", "0211057B-AA02-4ECC-970A-C1E80B9EC0BC");
 
 		cap.setCapability("app", "/Users/runner/work/starboard-ios/starboard-ios/app/Starboard.app");
