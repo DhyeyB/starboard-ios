@@ -33,8 +33,16 @@ jobs:
           appium -v
           npm -g install npm
           appium driver list --installed
+          npm install -g appium-xcuitest-driver
           npm install -g appium-ios-driver
           # appium > /dev/null &
+
+      - name: Install appium driver
+        run: |
+          npm install -g appium-xcuitest-driver
+          npm install -g appium-ios-driver
+          appium driver install xcuitest
+
 
       - name: Start Appium Server
         run: |
