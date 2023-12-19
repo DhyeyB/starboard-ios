@@ -49,15 +49,15 @@ jobs:
           appium > appium.log 2>&1 &
           ls -la
 
-      - name: Wait for Appium Server to Start
-        run: sleep 10
+      # - name: Wait for Appium Server to Start
+      #   run: sleep 10
 
       - name: ios simulator
         uses: futureware-tech/simulator-action@v3
         with:
             model: 'iPhone 14 Pro Max'
             # os: 'iOS'
-            # udid: "0211057B-AA02-4ECC-970A-C1E80B9EC0BC"
+            udid: "704210AC-CBDA-470A-AAEA-46F68DD733EB"
              
 
       # - uses: maxim-lobanov/setup-xcode@v1
