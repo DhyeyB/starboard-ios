@@ -3,8 +3,8 @@
 <suite name="StarboardSuite">
   <test thread-count="5" name="Starboard_test_cases" verbose="10">
     <classes>
-    	<!-- <class name="general.Base"/> -->
-    	<!-- <class name="general.Add_Location"/> -->
+    	<!-- <class name="general.Base"/>
+    	<<class name="general.Add_Location"/> -->
     	<class name="general.Login_test"/>
     	<!-- class name="general.Linking_Transactions"/>
     	<class name="general.More_Module"/>

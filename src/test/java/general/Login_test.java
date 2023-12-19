@@ -173,7 +173,7 @@ public class Login_test
 
 		// 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.TextView[@text='Home']")));
 
-		// }
+		}
 
 		catch (Exception e1)
 
@@ -195,21 +195,21 @@ public class Login_test
 		cap.setCapability("automationName", "XCUITest");
 		cap.setCapability("udid", "D637486D-0165-4A51-B648-73F0F4A0ADAC");
 		cap.setCapability("app","/Users/runner/work/starboard-ios/starboard-ios/app/Starboard.app");
+		System.out.println("**********----------   Starboard app installed    **********----------");
 		cap.setCapability(MobileCapabilityType.NO_RESET, true); // It will always clear the cachess
 
 		driver = new IOSDriver<MobileElement>(new URL("http://127.0.0.1:4723/"), cap);
 
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 
-		System.out.println("**********----------   Starboard app installed    **********----------");
-		//driver.activateApp("com.impossible-research.sandbox.Starboard");
+		// System.out.println("**********----------   Starboard app installed    **********----------");
+		driver.activateApp("com.impossible-research.sandbox.Starboard");
 
-		//System.out.println("**********----------     Starboard app opened    **********----------");
+		System.out.println("**********----------     Starboard app opened    **********----------");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//XCUIElementTypeButton[@name=\"Allow\"]"))).click();
 
-		System.out.println("**********---------- Clicked on Allow Pop-up
-		// **********----------");
+		System.out.println("**********---------- Clicked on Allow Pop-up  **********----------");
 
 		// Close starboard app
 		// driver.terminateApp("com.impossible-research.sandbox.Starboard");
