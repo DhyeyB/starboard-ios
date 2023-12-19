@@ -69,9 +69,9 @@ public class Base
 		
 		System.out.println("**********----------     Starboard app opened    **********----------");
 		
-		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//XCUIElementTypeButton[@name=\"Allow\"]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//XCUIElementTypeButton[@name=\"Allow\"]"))).click();
 		
-		//System.out.println("**********----------  Clicked on Allow    **********----------");
+		System.out.println("**********----------  Clicked on Allow    **********----------");
 		
 		// Close starboard app
 		//driver.terminateApp("com.impossible-research.sandbox.Starboard");
