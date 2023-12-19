@@ -106,84 +106,84 @@ public class Login_test
 			//driver.activateApp("com.google.android.gm");
 
 			// Wait for new magic link mail
-			wait.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("(//android.widget.TextView[@text='Magic link to sign in to the app.']) [1]")));
+		// 	wait.until(ExpectedConditions.visibilityOfElementLocated(
+		// 			By.xpath("(//android.widget.TextView[@text='Magic link to sign in to the app.']) [1]")));
 
-			driver.findElement(By.xpath("(//android.widget.TextView[@text='Magic link to sign in to the app.']) [1]"))
-					.click();
+		// 	driver.findElement(By.xpath("(//android.widget.TextView[@text='Magic link to sign in to the app.']) [1]"))
+		// 			.click();
 
-			// Scroll and Click on magic link
-			MobileElement ele = driver.findElement(MobileBy.AndroidUIAutomator(
-					"new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\"Login to Starboard\"))"));
-			ele.click();
+		// 	// Scroll and Click on magic link
+		// 	MobileElement ele = driver.findElement(MobileBy.AndroidUIAutomator(
+		// 			"new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\"Login to Starboard\"))"));
+		// 	ele.click();
 
-			// Enter Your PIN
-			wait.until(ExpectedConditions
-					.elementToBeClickable(By.xpath("//android.widget.TextView[@text='Enter your new PIN']")));
+		// 	// Enter Your PIN
+		// 	wait.until(ExpectedConditions
+		// 			.elementToBeClickable(By.xpath("//android.widget.TextView[@text='Enter your new PIN']")));
 
-			// Click on 1
-			driver.findElement(By.xpath("//android.widget.TextView[@text='1']")).click();
+		// 	// Click on 1
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='1']")).click();
 
-			// Click on 2
-			driver.findElement(By.xpath("//android.widget.TextView[@text='2']")).click();
+		// 	// Click on 2
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='2']")).click();
 
-			// Click on 3
-			driver.findElement(By.xpath("//android.widget.TextView[@text='3']")).click();
+		// 	// Click on 3
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='3']")).click();
 
-			// Click on 4
-			driver.findElement(By.xpath("//android.widget.TextView[@text='4']")).click();
+		// 	// Click on 4
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='4']")).click();
 
-			// Click on 5
-			driver.findElement(By.xpath("//android.widget.TextView[@text='5']")).click();
+		// 	// Click on 5
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='5']")).click();
 
-			// WebDriverWait wait2 = new WebDriverWait(driver, 20);
+		// 	// WebDriverWait wait2 = new WebDriverWait(driver, 20);
 
-			WebElement div2 = wait.until(ExpectedConditions
-					.elementToBeClickable(By.xpath("//android.widget.TextView[@text='Confirm your new PIN']")));
+		// 	WebElement div2 = wait.until(ExpectedConditions
+		// 			.elementToBeClickable(By.xpath("//android.widget.TextView[@text='Confirm your new PIN']")));
 
-			// Click on 1
-			driver.findElement(By.xpath("//android.widget.TextView[@text='1']")).click();
+		// 	// Click on 1
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='1']")).click();
 
-			// Click on 2
-			driver.findElement(By.xpath("//android.widget.TextView[@text='2']")).click();
+		// 	// Click on 2
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='2']")).click();
 
-			// Click on 3
-			driver.findElement(By.xpath("//android.widget.TextView[@text='3']")).click();
+		// 	// Click on 3
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='3']")).click();
 
-			// Click on 4
-			driver.findElement(By.xpath("//android.widget.TextView[@text='4']")).click();
+		// 	// Click on 4
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='4']")).click();
 
-			// Click on 5
-			driver.findElement(By.xpath("//android.widget.TextView[@text='5']")).click();
+		// 	// Click on 5
+		// 	driver.findElement(By.xpath("//android.widget.TextView[@text='5']")).click();
 
-			wait.until(ExpectedConditions
-					.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='PIN Set Up Successful']")));
+		// 	wait.until(ExpectedConditions
+		// 			.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='PIN Set Up Successful']")));
 
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.TextView[@text='Skip']")))
-					.click();
+		// 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.TextView[@text='Skip']")))
+		// 			.click();
 
-			wait.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("(//*[@resource-id='com.impossible_research.sandbox.starboard:id/head']) [1]")));
-			driver.findElement(By.xpath("(//*[@resource-id='com.impossible_research.sandbox.starboard:id/head']) [1]"))
-					.getText();
-			driver.findElement(By.xpath("(//*[@resource-id='com.impossible_research.sandbox.starboard:id/head']) [1]"))
-					.click();
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Button[@text='Allow']")))
-					.click();
+		// 	wait.until(ExpectedConditions.visibilityOfElementLocated(
+		// 			By.xpath("(//*[@resource-id='com.impossible_research.sandbox.starboard:id/head']) [1]")));
+		// 	driver.findElement(By.xpath("(//*[@resource-id='com.impossible_research.sandbox.starboard:id/head']) [1]"))
+		// 			.getText();
+		// 	driver.findElement(By.xpath("(//*[@resource-id='com.impossible_research.sandbox.starboard:id/head']) [1]"))
+		// 			.click();
+		// 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Button[@text='Allow']")))
+		// 			.click();
 
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.TextView[@text='Home']")));
+		// 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.TextView[@text='Home']")));
 
-		}
+		// }
 
-		catch (Exception e1)
+		// catch (Exception e1)
 
-		{
+		// {
 
-			System.out.println(e1);
-			Allure.addAttachment("AllureSelenide",
-					new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+		// 	System.out.println(e1);
+		// 	Allure.addAttachment("AllureSelenide",
+		// 			new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 
-		}
+		// }
 
 	}
 
@@ -193,8 +193,8 @@ public class Login_test
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 14 Pro Max");
 		cap.setCapability("automationName", "XCUITest");
-		cap.setCapability("udid", "0211057B-AA02-4ECC-970A-C1E80B9EC0BC");
-		cap.setCapability("app","/Users/apple/Library/Developer/Xcode/DerivedData/testapp-eqlcjdspfzzjswgpsofjosqtsile/Build/Products/Debug-iphonesimulator/Starboard.app");
+		cap.setCapability("udid", "D637486D-0165-4A51-B648-73F0F4A0ADAC");
+		cap.setCapability("app","/Users/runner/work/starboard-ios/starboard-ios/app/Starboard.app");
 		cap.setCapability(MobileCapabilityType.NO_RESET, true); // It will always clear the cachess
 
 		driver = new IOSDriver<MobileElement>(new URL("http://127.0.0.1:4723/"), cap);
@@ -206,9 +206,9 @@ public class Login_test
 
 		//System.out.println("**********----------     Starboard app opened    **********----------");
 
-		// wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//XCUIElementTypeButton[@name=\"Allow\"]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//XCUIElementTypeButton[@name=\"Allow\"]"))).click();
 
-		// System.out.println("**********---------- Clicked on Allow Pop-up
+		System.out.println("**********---------- Clicked on Allow Pop-up
 		// **********----------");
 
 		// Close starboard app
