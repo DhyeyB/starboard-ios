@@ -53,7 +53,7 @@ jobs:
 
       - uses: futureware-tech/simulator-action@v3
         with:
-            model: 'iPhone 14'
+            model: 'iPhone 14 Pro Max'
             os: 'iOS'
             udid: "0211057B-AA02-4ECC-970A-C1E80B9EC0BC"
              
