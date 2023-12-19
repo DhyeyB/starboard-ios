@@ -57,7 +57,7 @@ jobs:
         with:
             model: 'iPhone 14 Pro Max'
             # os: 'iOS'
-            udid: "704210AC-CBDA-470A-AAEA-46F68DD733EB"
+            # udid: "704210AC-CBDA-470A-AAEA-46F68DD733EB"
              
 
       # - uses: maxim-lobanov/setup-xcode@v1
