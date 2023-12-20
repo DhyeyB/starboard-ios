@@ -193,7 +193,7 @@ public class Login_test
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 14 Pro Max");
 		cap.setCapability("automationName", "XCUITest");
-		cap.setCapability("udid", "D637486D-0165-4A51-B648-73F0F4A0ADAC");
+		cap.setCapability("udid", System.getProperty("udid"));
 		cap.setCapability("app","/Users/runner/work/starboard-ios/starboard-ios/app/Starboard.app");
 		System.out.println("**********----------   Starboard app installed    **********----------");
 		cap.setCapability(MobileCapabilityType.NO_RESET, true); // It will always clear the cachess
